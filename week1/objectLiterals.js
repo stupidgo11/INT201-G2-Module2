@@ -28,7 +28,12 @@ const st4 = {
     studentId: 65130500124,
     address: {province: 'Bangkok', country: 'Thailand'},
     //property value can store function
-    getFullname: function () {
+    // getFullname: function () {
+    //     return `${this.firstname} ${this.lastname}`
+    // },
+
+    //shortcut property function (remove :function)
+    getFullname () {
         return `${this.firstname} ${this.lastname}`
     }
 }
