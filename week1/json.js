@@ -2,7 +2,7 @@
 const obj1 = {}
 const obj2 = { id: 1, name:'Somchai' }
 const obj3 = { ...obj2 } //spread operator copy only property content not structure
-
+const obj4 = { ...obj2, id: 2 } //can be replace values
 //wrong way to check
 if(obj1 === {}) console.log(`object is an empty`)
 else console.log(`object is not empty`)
