@@ -4,7 +4,7 @@ function findFileExtension(filename) {
 console.log(findFileExtension('sample.ex.jpeg'))
 
 function isImageFileExtension(filename) {
-    if(filename===null||filename===undefined)
+    if(filename === null||filename === undefined)
     //.png, .jpg, .jpeg, .gif, .svg
     return (
         filename.endsWith('.png') ||

@@ -14,7 +14,7 @@ console.log(typeof st2)
 console.log(Object.keys(st1)) //array of property key
 console.log(Object.values(st1)) //array of property value
 
-const st3={
+const st3 = {
     firstname: 'Yada', 
     lastname: 'Jenrungrodsakul', 
     studentId: 65130500017
@@ -50,3 +50,7 @@ st4.getAddress = function () {
 console.log(st4.getAddress())
 console.log(Object.prototype.isPrototypeOf(st4))
 console.log(Date.prototype.isPrototypeOf(st4))
+
+//get values of nested property
+console.log(st4.address.country)
+console.log(st4['address']['country'])
