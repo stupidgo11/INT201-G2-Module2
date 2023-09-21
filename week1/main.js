@@ -1,16 +1,6 @@
-function findFileExtension(filename) {
-    return filename.substring(filename.lastIndexOf('.'))
-}
-console.log(findFileExtension('sample.ex.jpeg'))
-
-function isImageFileExtension(filename) {
-    if(filename===null||filename===undefined)
-    //.png, .jpg, .jpeg, .gif, .svg
-    return (
-        filename.endsWith('.png') ||
-        filename.endsWith('.jpg')||
-        filename.endsWith('.jpeg') ||
-        filename.endsWith('.gif') ||
-        filename.endsWith('.svg')
-    )
-}
+//create object with object literals
+const st1={studentId:65130500105, firstname:'Natthaphol',lastname:'Nirattisaikul'}
+console.log(typeof st1)
+console.log(st1)
+const st2 = {} //empty object
+console.log(st2)
