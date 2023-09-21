@@ -1,5 +1,10 @@
 //create object with object literals
-const st1 = {studentId: 65130500105, firstname: 'Natthaphol',lastname: 'Nirattisaikul'}
+const st1 = {
+    studentId: 65130500105, 
+    firstname: 'Natthaphol',
+    lastname: 'Nirattisaikul',
+    studentId: 1 //dont be use same name of property because it will replace value
+}
 console.log(typeof st1)
 console.log(st1)
 const st2 = {} //empty object
@@ -9,7 +14,11 @@ console.log(typeof st2)
 console.log(Object.keys(st1)) //array of property key
 console.log(Object.values(st1)) //array of property value
 
-const st3={firstname: 'Yada', lastname: 'Jenrungrodsakul', studentId: 65130500017}
+const st3={
+    firstname: 'Yada', 
+    lastname: 'Jenrungrodsakul', 
+    studentId: 65130500017
+}
 console.log(st3)
 
 //conposite object : address is nested in st4 object
@@ -41,12 +50,3 @@ st4.getAddress = function () {
 console.log(st4.getAddress())
 console.log(Object.prototype.isPrototypeOf(st4))
 console.log(Date.prototype.isPrototypeOf(st4))
-//property value can store function
-const st5 = {
-    firstname: 'Poramade', 
-    lastname: 'Winyunawan', 
-    studentId: 65130500110,
-    getFullname: function () {
-        return `${this.firstname} ${this.lastname}`
-    }
-}
