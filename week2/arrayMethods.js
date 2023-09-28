@@ -28,6 +28,7 @@ keywords.forEach((keyword) => (firstChar += keyword.charAt(0)))
 console.log(firstChar)
 keywords.push('optional chaining')
 console.log(keywords)
+
 //2. all mail ids of mails array
 const mailIds = []
 mails.forEach((mail) => mailIds.push(mail.id))
@@ -43,6 +44,7 @@ console.log(esKeywords)
 
 //map() Examples : return new array on every element in the array
 //map() better than forEach()
+//map() like where clause in sql you can select some property in array
 //4. array that contains all senders'firstname'
 const mailSenders = mails.map((mail) => mail.sender.firstname)
 console.log(mailSenders)
