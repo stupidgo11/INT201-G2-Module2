@@ -12,4 +12,4 @@ const studentScores = [
   { name: 'Eve', score: 78 }
 ]
 const passingNames = getPassingNames(studentScores)
-console.log(passingNames)
+console.log(passingNames)// all name of who scores >= 70

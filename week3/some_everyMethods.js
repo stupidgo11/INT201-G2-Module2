@@ -7,8 +7,8 @@ const fruits = ['apple', 'mango', 'orange', 'pineapple']
 const vowelFruits = fruits.every((fruit) =>
   fruit.toLowerCase().startsWith('a' || 'e' || 'i' || 'o' || 'u')
 )
-const vowelIncludesFruits = fruits.every((fruit) =>
+const vowelIncludesFruits = fruits.some((fruit) =>
   ['a', 'e', 'i', 'o', 'u'].includes(fruit[0].toLowerCase())
 )
-console.log(vowelFruits)
-console.log(vowelIncludesFruits)
+console.log(vowelFruits) //false
+console.log(vowelIncludesFruits) //true

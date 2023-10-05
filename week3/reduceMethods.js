@@ -6,7 +6,7 @@ const result = fruits.reduce(
   (firstChars, fruit) => firstChars.concat(fruit[0]),
   ' '
 )
-console.log(result)
+console.log(result)//'amop'
 
 const nums = [1, 2, 3, 4, 5]
 const mulResult = nums.reduce((total, current) => total * current)
@@ -21,4 +21,4 @@ const sellTotal = sellProducts.reduce(
   (total, product) => total + product.price * product.sell,
   0
 )
-console.log(sellTotal)
+console.log(sellTotal)//850
