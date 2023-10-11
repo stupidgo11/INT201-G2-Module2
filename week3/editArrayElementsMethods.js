@@ -64,10 +64,9 @@ const persons = [
 ]
 //HOMEWORK
 //return sorted array by fullname (ascending order and ignore case)
-console.log(
-  persons.sort((a, b) => {
-    const A = a.fullname.toLowerCase()
-    const B = b.fullname.toLowerCase()
-    return A - B
-  })
-)
+
+persons.sort((a, b) => {
+  return a.fullname.localeCompare(b.fullname)
+})
+//localeCompare is same like toCompare in JAVA
+console.log(persons)
