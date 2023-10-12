@@ -51,16 +51,4 @@ const underPerformStudents = (students) => {
 }
 
 console.log(underPerformStudents(students))
-console.log(
-  students
-    .filter(
-      (student) => getAttendanceRate(student) < 80 || getAvgScore(student) < 70
-    )
-    .forEach((filterStd) => {
-      const s1 = {
-        name: filterStd.name,
-        attendanceRate: getAttendanceRate(filterStd),
-        avgScore: getAvgScore(filterStd)
-      }
-    })
-)
+

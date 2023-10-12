@@ -1,10 +1,10 @@
 function counter() {
   let count = 1
   function increment() {
-    return count++
+    return count++ //+ after return
   }
   function decrement() {
-    return count--
+    return count-- //- after return
   }
   return { increment, decrement }
 }
