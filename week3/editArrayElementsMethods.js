@@ -59,8 +59,8 @@ console.log(nums.sort((a, b) => b - a)) // descendent [1000, 50, 20, 5, 3, 2, 1 
 
 const persons = [
   { id: 1, fullname: 'Susan Jo' },
-  { id: 2, fullname: 'John Lee' },
-  { id: 3, fullname: 'ann Smith' }
+  { id: 3, fullname: 'John Lee' },
+  { id: 2, fullname: 'ann Smith' }
 ]
 //HOMEWORK
 //return sorted array by fullname (ascending order and ignore case)
@@ -68,5 +68,12 @@ const persons = [
 persons.sort((a, b) => {
   return a.fullname.localeCompare(b.fullname)
 })
+
+persons.sort((a, b) => {
+  if (a.fullname.toLocaleLowerCase() < b.fullname.toLocaleLowerCase())
+    return 1 //swap
+  else return 0 //no swap
+})
+
 //localeCompare is same like toCompare in JAVA
 console.log(persons)
