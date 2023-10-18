@@ -19,7 +19,7 @@ const students = [
 const getAttendanceRate = (student) => {
   let check = 0
   student.attendance.forEach((x) => {
-    if (x === true) {
+    if (x) {
       check++
     }
   })
@@ -38,7 +38,7 @@ const underPerformStudents = (students) => {
   const underPerform = []
   students
     .filter(
-      (student) => getAttendanceRate(student) < 80 || getAvgScore(student) < 70
+      (student) => getAttendanceRate(student) < 80 && getAvgScore(student) < 70
     )
     .forEach((filterStd) => {
       underPerform.push({
