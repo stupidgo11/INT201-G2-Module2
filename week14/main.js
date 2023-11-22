@@ -5,11 +5,11 @@ submitButton.addEventListener('click', (e) => {
   const validInput = Array.from(allInputEles).every((e) => e.value.length !== 0)
   const pEle = document.querySelector('p')
   if (!validInput) {
-    pEle.textContent = 'missing some value'
+    pEle.textContent = 'missing username or password'
     pEle.style = 'color:red'
   } else {
-    pEle.textContent = 'ok pass test'
+    pEle.textContent = 'success'
     pEle.style = 'color:green'
   }
-  console.log('clicked')
+  console.log('submit clicked')
 })
