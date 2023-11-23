@@ -1,36 +1,39 @@
-const submitButton = document.getElementById('submit-btn-01')
-submitButton.addEventListener('click', (e) => {
-  e.preventDefault()
-  console.log('submit clicked')
-  const inputElements = document.querySelectorAll('input')
-  //   console.log(inputElements[0].value)
-  //   console.log(inputElements[1].value)
-  const pElement = document.querySelector('p')
-  if (
-    inputElements[0].value.length === 0 ||
-    inputElements[1].value.length === 0
-  ) {
-    pElement.textContent = 'some values are missing, please check'
-  } else {
-    pElement.textContent = 'Your input are complete'
-  }
-})
-
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOM is loaded')
+  console.log('Your DOM tree built')
 })
 window.addEventListener('load', () => {
-  console.log('Load')
+  console.log('Your Applciation Loaded')
 })
 window.addEventListener('beforeunload', () => {
-  console.log('before unload')
   localStorage.setItem('myCat', 'Tom')
 })
-
-const inputElements = document.querySelectorAll('input')
-inputElements[0].addEventListener('focus', () => {
-  console.log('input focused')
+window.addEventListener('mousemove', (e) => {
+  console.log(`x:${e.screenX}, y:${e.screenY}`)
 })
-inputElements[0].addEventListener('blur', () => {
-  console.log('input blured')
+const userElement = document.getElementById('input-user')
+const pswElement = document.getElementById('input-psw')
+userElement.addEventListener('focus', () => {
+  console.log('Your focus is on username')
+})
+userElement.addEventListener('blur', () => {
+  console.log('Your username input textbox is blured')
+})
+
+//using keydown and keypress only to detect number characters 0-9
+userElement.addEventListener('keydown', (e) => {
+  console.log(`${e.key}, ${e.code}`)
+  if (e.key >= 0 && e.key <= 9) {
+    e.preventDefault()
+  }
+})
+// when user release enter key, text value on username will show at <p> element
+userElement.addEventListener('keyup', (e) => {
+  if (e.key === 'Enter') {
+    const pElement = document.querySelector('p')
+    pElement.textContent = e.target.value
+  }
+})
+userElement.addEventListener('input', (e) => {
+  const pElement = document.querySelector('p')
+  pElement.textContent = e.target.value
 })

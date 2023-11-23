@@ -1,19 +1,32 @@
-//1. select HTML objects
-const outerDiv = document.getElementById('outer-div')
-const innerDiv = document.getElementById('inner-div')
+//1. select target HTML object
 const submitButton = document.querySelector('button')
-function doSomething() {
-  console.log('do something')
+// console.log(submitButton)
+// 2 register handler function on a target HtML object
+const doSomething = (e) => {
+  // console.log('submit button is clicked')
+  // console.log(e)
+  console.log(e.target.id)
+  // console.log(e.type)
+  // console.log(e.target)
+  console.log(e.currentTarget)
+  console.log(e.eventPhase)
 }
-//multiple function handlers on the same HTML object and event type
-submitButton.addEventListener('click', () => {
-  console.log('submit clicked')
-})
 submitButton.addEventListener('click', doSomething)
-//remove function handler
-//it 's work
-submitButton.removeEventListener('click', doSomething)
-//does not work
-submitButton.removeEventListener('click', () => {
-  console.log('submit clicked')
+// -----------------------
+// inner-div
+const innerDiv = document.getElementById('inner-div')
+// console.log(innerDiv)
+innerDiv.addEventListener('click', (event) => {
+  console.log(event.target.id)
+  console.log(event.currentTarget)
+  console.log(event.eventPhase)
+})
+// -----------------------
+// outer-div
+const outerDiv = document.getElementById('outer-div')
+// console.log(innerDiv)
+outerDiv.addEventListener('click', (event) => {
+  console.log(event.target.id)
+  console.log(event.currentTarget)
+  console.log(event.eventPhase)
 })
